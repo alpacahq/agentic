@@ -2,7 +2,7 @@
   "name": "alpaca-trading",
   "displayName": "Alpaca Trading",
   "version": "0.1.0",
-  "description": "Connects Claude Code to the Alpaca Trading API MCP (live) over OAuth-protected HTTP.",
+  "description": "Connects Claude Code to Alpaca's Trading and Market Data APIs over OAuth-protected MCP.",
   "author": {
     "name": "Alpaca",
     "email": "support@alpaca.markets"
@@ -14,6 +14,14 @@
     "alpaca-trading": {
       "type": "http",
       "url": "https://api.alpaca.markets/mcp"
+    },
+    "alpaca-trading-paper": {
+      "type": "http",
+      "url": "https://paper-api.alpaca.markets/mcp"
+    },
+    "alpaca-market-data": {
+      "type": "http",
+      "url": "https://data.alpaca.markets/mcp"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "alpaca-trading",
   "version": "0.1.0",
-  "description": "Connects Codex to the Alpaca Trading API MCP (live) over OAuth-protected HTTP.",
+  "description": "Connects Codex to Alpaca's Trading and Market Data APIs over OAuth-protected MCP.",
   "author": {
     "name": "Alpaca",
     "email": "support@alpaca.markets"
@@ -15,19 +15,31 @@
       "oauth": {
         "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
       }
+    },
+    "alpaca-trading-paper": {
+      "url": "https://paper-api.alpaca.markets/mcp",
+      "oauth": {
+        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+      }
+    },
+    "alpaca-market-data": {
+      "url": "https://data.alpaca.markets/mcp",
+      "oauth": {
+        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+      }
     }
   },
   "interface": {
     "displayName": "Alpaca Trading",
-    "shortDescription": "Use the live Alpaca Trading API MCP.",
-    "longDescription": "Connect Codex to Alpaca's live Trading API MCP for account, order, position, and portfolio workflows.",
+    "shortDescription": "Alpaca Trading and Market Data MCP servers.",
+    "longDescription": "Connect Codex to Alpaca's Trading and Market Data MCP servers for account, order, position, portfolio, and market data workflows.",
     "developerName": "Alpaca",
     "category": "Finance",
     "capabilities": [
       "MCP Server"
     ],
     "defaultPrompt": [
-      "Use Alpaca Trading to review my live trading workflow."
+      "Use Alpaca Trading to review my trading workflow."
     ]
   }
 }

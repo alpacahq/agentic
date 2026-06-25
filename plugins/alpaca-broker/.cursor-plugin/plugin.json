@@ -1,8 +1,8 @@
 {
-  "name": "alpaca-broker-api",
+  "name": "alpaca-broker",
   "displayName": "Alpaca Broker API",
   "version": "0.1.0",
-  "description": "Connects Cursor to the Alpaca Broker API MCP (live) over OAuth-protected HTTP.",
+  "description": "Connects Cursor to Alpaca's Broker API over OAuth-protected MCP.",
   "author": {
     "name": "Alpaca",
     "email": "support@alpaca.markets"
@@ -11,10 +11,16 @@
   "license": "MIT",
   "keywords": ["trading"],
   "mcpServers": {
-    "alpaca-broker-api": {
+    "alpaca-broker": {
       "url": "https://broker-api.alpaca.markets/mcp",
       "auth": {
         "CLIENT_ID": "PCBXWA7PCN3S6662PZK44KLURJ"
+      }
+    },
+    "alpaca-broker-sandbox": {
+      "url": "https://broker-api.sandbox.alpaca.markets/mcp",
+      "auth": {
+        "CLIENT_ID": "PCKU56KZNL2JHDU2BFNNNU4KVZ"
       }
     }
   }

@@ -5,30 +5,6 @@
   },
   "plugins": [
     {
-      "name": "alpaca-broker-api",
-      "source": {
-        "source": "local",
-        "path": "./plugins/alpaca-broker-api"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Finance"
-    },
-    {
-      "name": "alpaca-broker-api-sandbox",
-      "source": {
-        "source": "local",
-        "path": "./plugins/alpaca-broker-api-sandbox"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Finance"
-    },
-    {
       "name": "alpaca-trading",
       "source": {
         "source": "local",
@@ -41,22 +17,10 @@
       "category": "Finance"
     },
     {
-      "name": "alpaca-trading-paper",
+      "name": "alpaca-broker",
       "source": {
         "source": "local",
-        "path": "./plugins/alpaca-trading-paper"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Finance"
-    },
-    {
-      "name": "alpaca-market-data",
-      "source": {
-        "source": "local",
-        "path": "./plugins/alpaca-market-data"
+        "path": "./plugins/alpaca-broker"
       },
       "policy": {
         "installation": "AVAILABLE",

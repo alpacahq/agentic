@@ -2,7 +2,7 @@
   "name": "alpaca-trading",
   "displayName": "Alpaca Trading",
   "version": "0.1.0",
-  "description": "Connects Cursor to the Alpaca Trading API MCP (live) over OAuth-protected HTTP.",
+  "description": "Connects Cursor to Alpaca's Trading and Market Data APIs over OAuth-protected MCP.",
   "author": {
     "name": "Alpaca",
     "email": "support@alpaca.markets"
@@ -13,6 +13,18 @@
   "mcpServers": {
     "alpaca-trading": {
       "url": "https://api.alpaca.markets/mcp",
+      "auth": {
+        "CLIENT_ID": "PCBXWA7PCN3S6662PZK44KLURJ"
+      }
+    },
+    "alpaca-trading-paper": {
+      "url": "https://paper-api.alpaca.markets/mcp",
+      "auth": {
+        "CLIENT_ID": "PCBXWA7PCN3S6662PZK44KLURJ"
+      }
+    },
+    "alpaca-market-data": {
+      "url": "https://data.alpaca.markets/mcp",
       "auth": {
         "CLIENT_ID": "PCBXWA7PCN3S6662PZK44KLURJ"
       }

@@ -6,15 +6,22 @@ Each plugin is a thin wrapper that connects your agent to one of Alpaca's hosted
 
 ## Plugins
 
-| Plugin | Description | Endpoint |
-| --- | --- | --- |
-| `alpaca-broker-api` | Broker API (live) | `https://broker-api.alpaca.markets/mcp` |
-| `alpaca-broker-api-sandbox` | Broker API (sandbox) | `https://broker-api.sandbox.alpaca.markets/mcp` |
-| `alpaca-trading` | Trading API (live) | `https://api.alpaca.markets/mcp` |
-| `alpaca-trading-paper` | Trading API (paper) | `https://paper-api.alpaca.markets/mcp` |
-| `alpaca-market-data` | Market Data API | `https://data.alpaca.markets/mcp` |
+| Plugin | Bundled MCP servers |
+| --- | --- |
+| `alpaca-trading` | Trading API (live), Trading API (paper), Market Data API |
+| `alpaca-broker` | Broker API (live), Broker API (sandbox) |
 
-The same five plugins are packaged for all three agents in this repo. Pick and install only the ones you need.
+Endpoints:
+
+| MCP server | Endpoint |
+| --- | --- |
+| `alpaca-trading` | `https://api.alpaca.markets/mcp` |
+| `alpaca-trading-paper` | `https://paper-api.alpaca.markets/mcp` |
+| `alpaca-market-data` | `https://data.alpaca.markets/mcp` |
+| `alpaca-broker` | `https://broker-api.alpaca.markets/mcp` |
+| `alpaca-broker-sandbox` | `https://broker-api.sandbox.alpaca.markets/mcp` |
+
+Both plugins are packaged for all three agents in this repo. Install one or both depending on whether you're building trading or broker workflows.
 
 ## Prerequisites
 
@@ -49,7 +56,7 @@ codex mcp login <plugin-name>
 
 ## Authentication
 
-All plugins authenticate against `authx.alpaca.markets` (or the sandbox auth host for `alpaca-broker-api-sandbox`) using OAuth. Your agent only ever holds a short-lived token scoped to the API you signed in to — there are no long-lived API keys stored in plugin manifests or your editor settings.
+All plugins authenticate against `authx.alpaca.markets` (or the sandbox auth host for `alpaca-broker-sandbox`) using OAuth. Your agent only ever holds a short-lived token scoped to the API you signed in to — there are no long-lived API keys stored in plugin manifests or your editor settings.
 
 ## Repository structure
 

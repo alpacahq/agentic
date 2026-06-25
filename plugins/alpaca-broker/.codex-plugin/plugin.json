@@ -1,7 +1,7 @@
 {
-  "name": "alpaca-broker-api",
+  "name": "alpaca-broker",
   "version": "0.1.0",
-  "description": "Connects Codex to the Alpaca Broker API MCP (live) over OAuth-protected HTTP.",
+  "description": "Connects Codex to Alpaca's Broker API over OAuth-protected MCP.",
   "author": {
     "name": "Alpaca",
     "email": "support@alpaca.markets"
@@ -10,17 +10,23 @@
   "license": "MIT",
   "keywords": ["trading"],
   "mcpServers": {
-    "alpaca-broker-api": {
+    "alpaca-broker": {
       "url": "https://broker-api.alpaca.markets/mcp",
       "oauth": {
         "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+      }
+    },
+    "alpaca-broker-sandbox": {
+      "url": "https://broker-api.sandbox.alpaca.markets/mcp",
+      "oauth": {
+        "client_id": "PCQDJUXZE6UMJSTGGRFLONVLCE"
       }
     }
   },
   "interface": {
     "displayName": "Alpaca Broker API",
-    "shortDescription": "Use the live Alpaca Broker API MCP.",
-    "longDescription": "Connect Codex to Alpaca's live Broker API MCP for broker account and trading workflows.",
+    "shortDescription": "Alpaca Broker API MCP.",
+    "longDescription": "Connect Codex to Alpaca's Broker API MCP for broker account and trading workflows.",
     "developerName": "Alpaca",
     "category": "Finance",
     "capabilities": [
