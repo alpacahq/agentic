@@ -1,0 +1,33 @@
+{
+  "name": "alpaca-broker-api-sandbox",
+  "version": "0.1.0",
+  "description": "Connects Codex to the Alpaca Broker API MCP (sandbox) over OAuth-protected HTTP.",
+  "author": {
+    "name": "Alpaca",
+    "email": "support@alpaca.markets"
+  },
+  "repository": "https://github.com/alpacahq/agentic",
+  "license": "MIT",
+  "keywords": ["trading"],
+  "mcpServers": {
+    "alpaca-broker-api-sandbox": {
+      "url": "https://broker-api.sandbox.alpaca.markets/mcp",
+      "oauth": {
+        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+      }
+    }
+  },
+  "interface": {
+    "displayName": "Alpaca Broker API (Sandbox)",
+    "shortDescription": "Use the sandbox Alpaca Broker API MCP.",
+    "longDescription": "Connect Codex to Alpaca's sandbox Broker API MCP for testing broker account and trading workflows.",
+    "developerName": "Alpaca",
+    "category": "Finance",
+    "capabilities": [
+      "MCP Server"
+    ],
+    "defaultPrompt": [
+      "Use Alpaca Broker API sandbox to test my broker workflow."
+    ]
+  }
+}

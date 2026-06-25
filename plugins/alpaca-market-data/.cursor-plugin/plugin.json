@@ -1,0 +1,21 @@
+{
+  "name": "alpaca-market-data",
+  "displayName": "Alpaca Market Data",
+  "version": "0.1.0",
+  "description": "Connects Cursor to the Alpaca Market Data API MCP over OAuth-protected HTTP.",
+  "author": {
+    "name": "Alpaca",
+    "email": "support@alpaca.markets"
+  },
+  "repository": "https://github.com/alpacahq/agentic",
+  "license": "MIT",
+  "keywords": ["trading"],
+  "mcpServers": {
+    "alpaca-market-data": {
+      "url": "https://data.alpaca.markets/mcp",
+      "auth": {
+        "CLIENT_ID": "PCBXWA7PCN3S6662PZK44KLURJ"
+      }
+    }
+  }
+}

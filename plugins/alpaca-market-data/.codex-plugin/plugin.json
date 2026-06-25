@@ -1,0 +1,33 @@
+{
+  "name": "alpaca-market-data",
+  "version": "0.1.0",
+  "description": "Connects Codex to the Alpaca Market Data API MCP over OAuth-protected HTTP.",
+  "author": {
+    "name": "Alpaca",
+    "email": "support@alpaca.markets"
+  },
+  "repository": "https://github.com/alpacahq/agentic",
+  "license": "MIT",
+  "keywords": ["trading"],
+  "mcpServers": {
+    "alpaca-market-data": {
+      "url": "https://data.alpaca.markets/mcp",
+      "oauth": {
+        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+      }
+    }
+  },
+  "interface": {
+    "displayName": "Alpaca Market Data",
+    "shortDescription": "Use the Alpaca Market Data MCP.",
+    "longDescription": "Connect Codex to Alpaca's Market Data MCP for market data, options, crypto, and news workflows.",
+    "developerName": "Alpaca",
+    "category": "Finance",
+    "capabilities": [
+      "MCP Server"
+    ],
+    "defaultPrompt": [
+      "Use Alpaca Market Data to inspect market data."
+    ]
+  }
+}

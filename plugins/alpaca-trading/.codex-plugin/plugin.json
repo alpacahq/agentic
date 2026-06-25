@@ -1,0 +1,33 @@
+{
+  "name": "alpaca-trading",
+  "version": "0.1.0",
+  "description": "Connects Codex to the Alpaca Trading API MCP (live) over OAuth-protected HTTP.",
+  "author": {
+    "name": "Alpaca",
+    "email": "support@alpaca.markets"
+  },
+  "repository": "https://github.com/alpacahq/agentic",
+  "license": "MIT",
+  "keywords": ["trading"],
+  "mcpServers": {
+    "alpaca-trading": {
+      "url": "https://api.alpaca.markets/mcp",
+      "oauth": {
+        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
+      }
+    }
+  },
+  "interface": {
+    "displayName": "Alpaca Trading",
+    "shortDescription": "Use the live Alpaca Trading API MCP.",
+    "longDescription": "Connect Codex to Alpaca's live Trading API MCP for account, order, position, and portfolio workflows.",
+    "developerName": "Alpaca",
+    "category": "Finance",
+    "capabilities": [
+      "MCP Server"
+    ],
+    "defaultPrompt": [
+      "Use Alpaca Trading to review my live trading workflow."
+    ]
+  }
+}

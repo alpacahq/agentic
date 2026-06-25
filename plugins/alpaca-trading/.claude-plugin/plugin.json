@@ -1,0 +1,19 @@
+{
+  "name": "alpaca-trading",
+  "displayName": "Alpaca Trading",
+  "version": "0.1.0",
+  "description": "Connects Claude Code to the Alpaca Trading API MCP (live) over OAuth-protected HTTP.",
+  "author": {
+    "name": "Alpaca",
+    "email": "support@alpaca.markets"
+  },
+  "repository": "https://github.com/alpacahq/agentic",
+  "license": "MIT",
+  "keywords": ["trading"],
+  "mcpServers": {
+    "alpaca-trading": {
+      "type": "http",
+      "url": "https://api.alpaca.markets/mcp"
+    }
+  }
+}

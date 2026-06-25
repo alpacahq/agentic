@@ -1,0 +1,36 @@
+{
+  "name": "alpaca-plugins",
+  "owner": {
+    "name": "Alpaca",
+    "email": "support@alpaca.markets"
+  },
+  "description": "Alpaca MCP plugins for Claude Code: Broker API, Trading, and Market Data.",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "alpaca-broker-api",
+      "source": "./plugins/alpaca-broker-api",
+      "description": "Alpaca Broker API MCP (live)"
+    },
+    {
+      "name": "alpaca-broker-api-sandbox",
+      "source": "./plugins/alpaca-broker-api-sandbox",
+      "description": "Alpaca Broker API MCP (sandbox)"
+    },
+    {
+      "name": "alpaca-trading",
+      "source": "./plugins/alpaca-trading",
+      "description": "Alpaca Trading API MCP (live)"
+    },
+    {
+      "name": "alpaca-trading-paper",
+      "source": "./plugins/alpaca-trading-paper",
+      "description": "Alpaca Trading API MCP (paper)"
+    },
+    {
+      "name": "alpaca-market-data",
+      "source": "./plugins/alpaca-market-data",
+      "description": "Alpaca Market Data API MCP"
+    }
+  ]
+}

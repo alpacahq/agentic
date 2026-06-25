@@ -1,0 +1,19 @@
+{
+  "name": "alpaca-broker-api",
+  "displayName": "Alpaca Broker API",
+  "version": "0.1.0",
+  "description": "Connects Claude Code to the Alpaca Broker API MCP (live) over OAuth-protected HTTP.",
+  "author": {
+    "name": "Alpaca",
+    "email": "support@alpaca.markets"
+  },
+  "repository": "https://github.com/alpacahq/agentic",
+  "license": "MIT",
+  "keywords": ["trading"],
+  "mcpServers": {
+    "alpaca-broker-api": {
+      "type": "http",
+      "url": "https://broker-api.alpaca.markets/mcp"
+    }
+  }
+}
