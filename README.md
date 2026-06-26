@@ -51,23 +51,5 @@ codex plugin marketplace add alpacahq/agentic
 Install plugins from the `alpaca-plugins` marketplace, then complete the OAuth flow:
 
 ```bash
-codex mcp login <plugin-name>
+codex mcp login <mcp-name>
 ```
-
-## Authentication
-
-All plugins authenticate against `authx.alpaca.markets` (or the sandbox auth host for `alpaca-broker-sandbox`) using OAuth. Your agent only ever holds a short-lived token scoped to the API you signed in to — there are no long-lived API keys stored in plugin manifests or your editor settings.
-
-## Repository structure
-
-```
-.cursor-plugin/marketplace.json     # Cursor marketplace manifest
-.claude-plugin/marketplace.json     # Claude Code marketplace manifest
-.agents/plugins/marketplace.json    # Codex marketplace manifest
-plugins/<plugin-name>/
-  .cursor-plugin/plugin.json
-  .claude-plugin/plugin.json
-  .codex-plugin/plugin.json
-```
-
-Each plugin folder is shared across platforms; only the per-platform manifest differs.
