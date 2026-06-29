@@ -1,6 +1,6 @@
 {
   "name": "alpaca-trading",
-  "displayName": "Alpaca Trading",
+  "displayName": "Alpaca Trading API",
   "version": "0.1.0",
   "description": "Connects Claude Code to Alpaca's Trading and Market Data APIs over OAuth-protected MCP.",
   "author": {

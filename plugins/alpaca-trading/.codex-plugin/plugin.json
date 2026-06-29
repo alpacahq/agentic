@@ -30,7 +30,7 @@
     }
   },
   "interface": {
-    "displayName": "Alpaca Trading",
+    "displayName": "Alpaca Trading API",
     "shortDescription": "Alpaca Trading and Market Data MCP servers.",
     "longDescription": "Connect Codex to Alpaca's Trading and Market Data MCP servers for account, order, position, portfolio, and market data workflows.",
     "developerName": "Alpaca",
@@ -39,7 +39,7 @@
       "MCP Server"
     ],
     "defaultPrompt": [
-      "Use Alpaca Trading to review my trading workflow."
+      "Use Alpaca Trading API to review my trading workflow."
     ],
     "logo": "./assets/logo.svg"
   }

@@ -25,8 +25,8 @@
   },
   "interface": {
     "displayName": "Alpaca Broker API",
-    "shortDescription": "Alpaca Broker API MCP.",
-    "longDescription": "Connect Codex to Alpaca's Broker API MCP for broker account and trading workflows.",
+    "shortDescription": "Alpaca Broker MCP server.",
+    "longDescription": "Connect Codex to Alpaca's Broker MCP server for broker account and trading workflows.",
     "developerName": "Alpaca",
     "category": "Finance",
     "capabilities": [
