@@ -8,7 +8,7 @@
   },
   "repository": "https://github.com/alpacahq/agentic",
   "license": "MIT",
-  "keywords": ["trading"],
+  "keywords": ["trading", "market-data"],
   "mcpServers": {
     "alpaca-trading": {
       "url": "https://api.alpaca.markets/mcp",
@@ -21,18 +21,12 @@
       "oauth": {
         "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
       }
-    },
-    "alpaca-market-data": {
-      "url": "https://data.alpaca.markets/mcp",
-      "oauth": {
-        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
-      }
     }
   },
   "interface": {
     "displayName": "Alpaca Trading API",
-    "shortDescription": "Alpaca Trading and Market Data MCP servers.",
-    "longDescription": "Connect Codex to Alpaca's Trading and Market Data MCP servers for account, order, position, portfolio, and market data workflows.",
+    "shortDescription": "Alpaca Trading MCP server with Trading and Market Data API access.",
+    "longDescription": "Connect Codex to Alpaca's Trading and Market Data APIs over MCP for account, order, position, portfolio, and market data workflows.",
     "developerName": "Alpaca",
     "category": "Finance",
     "capabilities": [

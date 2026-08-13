@@ -8,7 +8,7 @@ Connect AI agents to Alpaca's Trading API, Market Data API, and Broker API throu
 | --- | --- | --- |
 | Agent plugins | Hosted MCP setup in Cursor, Claude Code, and Codex | [Install plugins](#agent-plugins) |
 | Manual remote MCP | Hosted OAuth MCP setup in supported clients, including VS Code for Broker MCP | [Configure remote MCP](#manual-remote-mcp-configuration) |
-| Local Trading MCP | Running Trading and Market Data MCP locally with API keys | [Run locally](#run-trading-mcp-locally) |
+| Local Trading MCP | Running Trading and Market Data API tools locally with API keys | [Run locally](#run-trading-mcp-locally) |
 | Alpaca Trading CLI | Terminal, scripts, CI, and focused agent actions | [Use the CLI](#alpaca-trading-cli) |
 
 Use Trading MCP for an individual Alpaca trading account and market data. Use [Broker MCP](https://docs.alpaca.markets/us/docs/broker-mcp-server) if you're a broker partner building and operating end-customer investing experiences.
@@ -24,16 +24,17 @@ Plugins are the easiest way to connect Cursor, Claude Code, or Codex to Alpaca's
 
 | Plugin | Bundled MCP servers |
 | --- | --- |
-| `alpaca-trading` | Trading API (live), Trading API (paper), Market Data API |
+| `alpaca-trading` | Trading API (live), Trading API (paper) |
 | `alpaca-broker` | Broker API (live), Broker API (sandbox) |
 
 | MCP server | Endpoint |
 | --- | --- |
 | `alpaca-trading` | `https://api.alpaca.markets/mcp` |
 | `alpaca-trading-paper` | `https://paper-api.alpaca.markets/mcp` |
-| `alpaca-market-data` | `https://data.alpaca.markets/mcp` |
 | `alpaca-broker` | `https://broker-api.alpaca.markets/mcp` |
 | `alpaca-broker-sandbox` | `https://broker-api.sandbox.alpaca.markets/mcp` |
+
+Both Trading MCP servers expose Market Data API tools alongside trading tools, so a single connection covers account, order, position, portfolio, and market data workflows.
 
 Install one or both plugins depending on whether you're building trading or broker workflows.
 
@@ -91,12 +92,6 @@ If you don't want to use a plugin, copy the JSON for your client below. Use only
       "auth": {
         "CLIENT_ID": "PCBXWA7PCN3S6662PZK44KLURJ"
       }
-    },
-    "alpaca-market-data": {
-      "url": "https://data.alpaca.markets/mcp",
-      "auth": {
-        "CLIENT_ID": "PCBXWA7PCN3S6662PZK44KLURJ"
-      }
     }
   }
 }
@@ -114,10 +109,6 @@ If you don't want to use a plugin, copy the JSON for your client below. Use only
     "alpaca-trading-paper": {
       "type": "http",
       "url": "https://paper-api.alpaca.markets/mcp"
-    },
-    "alpaca-market-data": {
-      "type": "http",
-      "url": "https://data.alpaca.markets/mcp"
     }
   }
 }
@@ -136,12 +127,6 @@ If you don't want to use a plugin, copy the JSON for your client below. Use only
     },
     "alpaca-trading-paper": {
       "url": "https://paper-api.alpaca.markets/mcp",
-      "oauth": {
-        "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
-      }
-    },
-    "alpaca-market-data": {
-      "url": "https://data.alpaca.markets/mcp",
       "oauth": {
         "client_id": "PCIEJZTPCQEBUBAINMQOGDHF7I"
       }
