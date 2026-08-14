@@ -4,7 +4,7 @@
     "name": "Alpaca",
     "email": "support@alpaca.markets"
   },
-  "description": "Alpaca MCP plugins for Claude Code: Trading and Broker API.",
+  "description": "Alpaca MCP plugins for Claude Code, with Trading, Market Data, and Broker API access.",
   "version": "0.1.0",
   "plugins": [
     {
