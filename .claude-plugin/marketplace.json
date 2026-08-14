@@ -10,7 +10,7 @@
     {
       "name": "alpaca-trading",
       "source": "./plugins/alpaca-trading",
-      "description": "MCP servers for Alpaca's Trading and Market Data APIs"
+      "description": "Alpaca's Trading and Market Data MCP"
     },
     {
       "name": "alpaca-broker",
