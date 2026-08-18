@@ -9,7 +9,7 @@
   },
   "repository": "https://github.com/alpacahq/agentic",
   "license": "MIT",
-  "keywords": ["trading"],
+  "keywords": ["trading", "market-data"],
   "mcpServers": {
     "alpaca-trading": {
       "type": "http",
@@ -18,10 +18,6 @@
     "alpaca-trading-paper": {
       "type": "http",
       "url": "https://paper-api.alpaca.markets/mcp"
-    },
-    "alpaca-market-data": {
-      "type": "http",
-      "url": "https://data.alpaca.markets/mcp"
     }
   }
 }

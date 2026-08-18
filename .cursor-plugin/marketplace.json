@@ -5,14 +5,14 @@
     "email": "support@alpaca.markets"
   },
   "metadata": {
-    "description": "Alpaca MCP plugins for Cursor: Trading and Broker API.",
+    "description": "Alpaca MCP plugins for Cursor, with Trading, Market Data, and Broker API access.",
     "version": "0.1.0"
   },
   "plugins": [
     {
       "name": "alpaca-trading",
       "source": "./plugins/alpaca-trading",
-      "description": "Alpaca Trading and Market Data MCP"
+      "description": "Alpaca's Trading and Market Data MCP"
     },
     {
       "name": "alpaca-broker",
