@@ -1,0 +1,103 @@
+// docs/architecture/agentic.c4 — alpacahq/agentic
+// generated_by: claude-fable-5 / layered-docs 2026-08
+// source_commit: 6fb47e3294349e0bf3dfd9f811ae59f512f27d00   source_branch: allium/layered-docs-2026-08   generated_at: 2026-08-21T21:10:57Z
+// confidence: high   review_status: draft-needs-review
+model {
+  agentic = system 'Alpaca Agent Tools (agentic)' {
+    #generated
+    description '
+      Distribution repository that connects AI agents to Alpaca APIs: plugin marketplace
+      manifests and two plugins that point MCP clients at Alpaca hosted, OAuth-protected
+      MCP endpoints for the Trading, Market Data, and Broker APIs. Evidence: README.md
+    '
+    technology 'JSON plugin manifests + Markdown docs (no runtime code)'
+    link https://github.com/alpacahq/agentic 'Repository'
+    metadata {
+      okf 'docs/okf/system.md'
+      allium 'none: no .allium specs exist in this repository'
+      evidence 'README.md, .claude-plugin/marketplace.json, .cursor-plugin/marketplace.json, .agents/plugins/marketplace.json'
+    }
+
+    marketplace = container 'Marketplace manifests' {
+      #generated #entrypoint
+      description 'Three parallel marketplace definitions ("alpaca-plugins") in client-specific locations, each listing the two plugins. Evidence: .claude-plugin/marketplace.json, .cursor-plugin/marketplace.json, .agents/plugins/marketplace.json; marketplace import evidenced in README.md'
+      technology 'JSON'
+      metadata {
+        okf 'docs/okf/system.md'
+        allium 'none: no .allium specs exist in this repository'
+        evidence '.claude-plugin/marketplace.json, .cursor-plugin/marketplace.json, .agents/plugins/marketplace.json'
+      }
+    }
+
+    trading_plugin = container 'alpaca-trading plugin' {
+      #generated
+      description 'Plugin manifests (Claude Code, Codex, Cursor variants) that register the hosted Trading MCP servers — live and paper — exposing Trading and Market Data API tools. Evidence: plugins/alpaca-trading/.claude-plugin/plugin.json'
+      technology 'JSON plugin manifest'
+      metadata {
+        okf 'docs/okf/system.md'
+        allium 'none: no .allium specs exist in this repository'
+        evidence 'plugins/alpaca-trading/.claude-plugin/plugin.json, plugins/alpaca-trading/.codex-plugin/plugin.json, plugins/alpaca-trading/.cursor-plugin/plugin.json'
+      }
+    }
+
+    broker_plugin = container 'alpaca-broker plugin' {
+      #generated
+      description 'Plugin manifests (Claude Code, Codex, Cursor variants) that register the hosted Broker MCP servers — live and sandbox. Evidence: plugins/alpaca-broker/.claude-plugin/plugin.json'
+      technology 'JSON plugin manifest'
+      metadata {
+        okf 'docs/okf/system.md'
+        allium 'none: no .allium specs exist in this repository'
+        evidence 'plugins/alpaca-broker/.claude-plugin/plugin.json, plugins/alpaca-broker/.codex-plugin/plugin.json, plugins/alpaca-broker/.cursor-plugin/plugin.json'
+      }
+    }
+
+    marketplace -[uses]-> trading_plugin 'lists as plugin source ./plugins/alpaca-trading (.claude-plugin/marketplace.json)'
+    marketplace -[uses]-> broker_plugin 'lists as plugin source ./plugins/alpaca-broker (.claude-plugin/marketplace.json)'
+  }
+
+  ext_mcp_clients = external 'MCP clients (Cursor, Claude Code, Codex, VS Code)' {
+    #generated #external
+    description 'Agent clients. Plugin install path: Cursor, Claude Code, Codex only (README.md:42). Manual remote-MCP configuration path: those three plus VS Code, documented for the Broker MCP only (README.md:199-218). Evidence: README.md ("Agent Plugins", "Manual Remote MCP Configuration")'
+  }
+  ext_alpaca_trading_mcp = external 'Alpaca Trading MCP (hosted)' {
+    #generated #external
+    description 'Hosted OAuth-protected MCP endpoints for the Trading and Market Data APIs: api.alpaca.markets/mcp (live) and paper-api.alpaca.markets/mcp (paper). Evidence: plugins/alpaca-trading/.claude-plugin/plugin.json, README.md'
+  }
+  ext_alpaca_broker_mcp = external 'Alpaca Broker MCP (hosted)' {
+    #generated #external
+    description 'Hosted OAuth-protected MCP endpoints for the Broker API: broker-api.alpaca.markets/mcp (live) and broker-api.sandbox.alpaca.markets/mcp (sandbox). Evidence: plugins/alpaca-broker/.claude-plugin/plugin.json, README.md'
+  }
+
+  ext_alpaca_mcp_server_local = external 'Alpaca Trading MCP Server (self-hosted)' {
+    #generated #external
+    description 'Open-source Trading MCP server (alpacahq/alpaca-mcp-server) run locally with API-key authentication; this repository only points users to it. Evidence: README.md:220-222, README.md:7-12'
+  }
+  ext_alpaca_trading_cli = external 'Alpaca Trading CLI' {
+    #generated #external
+    description 'Terminal CLI over the Trading and Market Data APIs for scripts, CI, and focused agent actions; this repository only points users to it. Evidence: README.md:224-228, README.md:7-12'
+  }
+
+  ext_mcp_clients -[reads]-> agentic.marketplace 'imports marketplace alpacahq/agentic and installs plugins (README.md)'
+  agentic.trading_plugin -[uses]-> ext_alpaca_trading_mcp 'declares live and paper Trading MCP endpoints for the installing client (plugins/alpaca-trading/.claude-plugin/plugin.json)'
+  agentic.broker_plugin -[uses]-> ext_alpaca_broker_mcp 'declares live and sandbox Broker MCP endpoints for the installing client (plugins/alpaca-broker/.claude-plugin/plugin.json)'
+
+  developer_user = person 'Alpaca account holder / agent developer' {
+    description 'Person with an Alpaca account who connects an AI agent to Alpaca APIs. Evidence: README.md ("Prerequisites")'
+  }
+  developer_user -[uses]-> agentic 'follows setup instructions, installs plugins, completes OAuth flows (README.md)'
+  developer_user -[uses]-> ext_alpaca_mcp_server_local 'alternative to hosted MCP, API-key auth; documented setup path only (README.md:220-222)'
+  developer_user -[uses]-> ext_alpaca_trading_cli 'alternative command-line setup path documented by this repository (README.md:224-228)'
+}
+
+views {
+  view agentic_context {
+    title 'Alpaca Agent Tools — context'
+    include agentic, ext_mcp_clients, ext_alpaca_trading_mcp, ext_alpaca_broker_mcp, ext_alpaca_mcp_server_local, ext_alpaca_trading_cli, developer_user
+    autoLayout TopBottom
+  }
+  view agentic_containers of agentic {
+    title 'Alpaca Agent Tools — containers'
+    include *
+    autoLayout LeftRight
+  }
+}
