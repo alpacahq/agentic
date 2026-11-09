@@ -9,6 +9,7 @@
   },
   "repository": "https://github.com/alpacahq/agentic",
   "license": "MIT",
+  "privacyPolicyUrl": "https://s3.amazonaws.com/files.alpaca.markets/disclosures/PrivacyPolicy.pdf",
   "keywords": ["trading"],
   "mcpServers": {
     "alpaca-broker": {
