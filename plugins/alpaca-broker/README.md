@@ -11,13 +11,13 @@ Connects your agent to Alpaca's Broker API through hosted, OAuth-protected MCP s
 
 ## Setup
 
-You need an [Alpaca Broker Dashboard](https://broker-app.alpaca.markets) account.
+You need an [Alpaca Broker API dashboard](https://broker-app.alpaca.markets) account.
 
 ```bash
 claude plugin marketplace add alpacahq/agentic
 ```
 
-Run `/plugin`, install `alpaca-broker` from the `alpaca-plugins` marketplace, then run `/reload-plugins`. Use `/mcp` to start a server and approve access in the Broker Dashboard.
+Run `/plugin`, install `alpaca-broker` from the `alpaca-plugins` marketplace, then run `/reload-plugins`. Use `/mcp` to start a server and approve access in the Broker API dashboard.
 
 For Cursor and Codex, see the [repository README](https://github.com/alpacahq/agentic#agent-plugins).
 
