@@ -1,17 +1,17 @@
 # Alpaca Agent Tools: Plugins, MCP, and CLI Setup
 
-Connect AI agents to Alpaca's Trading API, Market Data API, and Broker API through hosted plugins, remote MCP servers, a local Trading MCP server, or the Alpaca Trading CLI.
+Connect AI agents to Alpaca's Trading API, Market Data API, and Broker API through hosted plugins, remote MCP servers, a local Trading API MCP server, or the Alpaca Trading CLI.
 
 ## What You Can Set Up
 
 | Option | Best for | Setup |
 | --- | --- | --- |
 | Agent plugins | Hosted MCP setup in Cursor, Claude Code, and Codex | [Install plugins](#agent-plugins) |
-| Manual remote MCP | Hosted OAuth MCP setup in supported clients, including VS Code for Broker MCP | [Configure remote MCP](#manual-remote-mcp-configuration) |
-| Local Trading MCP | Running Trading and Market Data API tools locally with API keys | [Run locally](#run-trading-mcp-locally) |
+| Manual remote MCP | Hosted OAuth MCP setup in supported clients, including VS Code for Broker API MCP | [Configure remote MCP](#manual-remote-mcp-configuration) |
+| Local Trading API MCP | Running Trading and Market Data API tools locally with API keys | [Run locally](#run-trading-api-mcp-locally) |
 | Alpaca Trading CLI | Terminal, scripts, CI, and focused agent actions | [Use the CLI](#alpaca-trading-cli) |
 
-Use Trading MCP for an individual Alpaca trading account and market data. Use [Broker MCP](https://docs.alpaca.markets/us/docs/broker-mcp-server) if you're a broker partner building and operating end-customer investing experiences.
+Use [Trading API MCP](https://docs.alpaca.markets/us/docs/trading-api-mcp) for an individual Alpaca trading account and market data. Use [Broker API MCP](https://docs.alpaca.markets/us/docs/broker-api-mcp) if you're a broker partner building and operating end-customer investing experiences.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ Plugins are the easiest way to connect Cursor, Claude Code, or Codex to Alpaca's
 | `alpaca-broker` | `https://broker-api.alpaca.markets/mcp` |
 | `alpaca-broker-sandbox` | `https://broker-api.sandbox.alpaca.markets/mcp` |
 
-Both Trading MCP servers expose Market Data API tools alongside trading tools, so a single connection covers account, order, position, portfolio, and market data workflows.
+Both Trading API MCP servers expose Market Data API tools alongside trading tools, so a single connection covers account, order, position, portfolio, and market data workflows.
 
 Install one or both plugins depending on whether you're building trading or broker workflows.
 
@@ -215,11 +215,11 @@ Add either or both servers to `.vscode/mcp.json`:
 }
 ```
 
-Open the command palette, run `MCP: List Servers`, select a server, and click **Start Server** to begin its OAuth flow. See the [Broker MCP VS Code setup](https://docs.alpaca.markets/us/docs/broker-mcp-server#vs-code) for details.
+Open the command palette, run `MCP: List Servers`, select a server, and click **Start Server** to begin its OAuth flow. See the [Broker API MCP VS Code setup](https://docs.alpaca.markets/us/docs/broker-api-mcp#vs-code) for details.
 
-## Run Trading MCP Locally
+## Run Trading API MCP Locally
 
-Run the open-source [Trading MCP Server](https://github.com/alpacahq/alpaca-mcp-server/) locally when you want API-key authentication or control over the server process and toolsets. See the [Trading MCP Server documentation](https://docs.alpaca.markets/us/docs/alpaca-mcp-server) for setup instructions.
+Run the open-source [Trading API MCP server](https://github.com/alpacahq/alpaca-mcp-server/) locally when you want API-key authentication or control over the server process and toolsets. See the [Trading API MCP documentation](https://docs.alpaca.markets/us/docs/trading-api-mcp) for setup instructions.
 
 ## Alpaca Trading CLI
 
