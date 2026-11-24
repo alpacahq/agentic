@@ -12,7 +12,7 @@
     {
       "name": "alpaca-trading",
       "source": "./plugins/alpaca-trading",
-      "description": "Alpaca's Trading and Market Data MCP"
+      "description": "Alpaca Trading API MCP, with Trading and Market Data API access"
     },
     {
       "name": "alpaca-broker",
